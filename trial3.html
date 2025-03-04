@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .nice {
+                font-family:sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- this use CSS inline method -->
+        <p>
+            This is the default serif font. It is commonly used in 
+            printed media for better readability, since letters 
+            are more distinct in serif fonts.
+        </p>
+        <p style="font-family: sans-serif">
+            This is a sans-serif font.
+            It is commonly used in screens because it is hard for screens
+            to render letters with such great detail.
+        </p>
+        <!-- using CSS tag method -->
+        <p>
+            This is the default font.
+        </p>
+        <p class="nice">
+            This is sans-serif font.
+        </p>
+        <!-- example of using different stylesheet -->
+        <p class="notnice">
+            This is impact font.
+        </p>
+        <!-- example of using programmatic access -->
+        <p id="serif-text">
+            This is the default serif font.
+        </p>
+        <p class="niche" id="sans-serif-text">
+            This is sans-serif font.
+        </p>
+        <script>
+            var sansSerifText = document.getElementById("sans-serif-text");
+            sansSerifText.style.fontFamily = "sans-serif";
+        </script>
+    </body>
+</html>
