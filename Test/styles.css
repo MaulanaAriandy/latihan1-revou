@@ -1,0 +1,27 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url(mudkip.jpg);
+    background-size: 80px 80px;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(240, 50, 50);
+}
+p {
+    color: hsla(360, 100%, 75%, 0.5);
+}
+.pokemon {
+    color: #00ff00;
+}
+#mudkip {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    text-transform:capitalize;
+    text-decoration:underline;
+    text-shadow: -4px 4px 4px brown;
+    line-height: 50%;
+    letter-spacing: 2px;
+    text-indent: 2rem;
+    text-align: center;
+    color: dodgerblue;
+}
