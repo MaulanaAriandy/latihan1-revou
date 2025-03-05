@@ -2,8 +2,105 @@
 <html>
     <head>
         <title>Practice</title>
+        <style>
+            h1 {
+                text-align: center; 
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            h2 {
+                text-align: left; 
+                font-family:Arial, Helvetica, sans-serif
+            }
+            table, th, td{
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 14px;
+                text-align: left;
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            p, label {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 14px;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: 350px 1000px 350px 350px;
+            }
+            input{
+                text-align: left;
+            }
+            #textdata {
+                width: 300px;
+                height: 100px;
+                text-align: left;
+                vertical-align: text-top;
+                padding: 5px;
+            }
+        </style>
     </head>
     <body>
+        <h1>Let's Practice !</h1>
+        <div class=grid-container>
+            <div>
+                <form>
+                    <h2>Form Belajar</h2>
+                    <p>Ini adalah website latihan pertama</p>
+                    <label for="nama">Nama :</label>
+                    <input type="text" value="Enter your name here" id="nama" name="namedata" style="width: 300px; height: 30px;">
+                    <br>
+                    <br>
+                    <label for="born">Tanggal Lahir</label>
+                    <input type="date" id="born" name="datedata" style="width: 300px; height: 30px;">
+                    <p>
+                        Jenis Kelamin 
+                        <input type="radio" id="lakilaki" name="genderdata" value="Male"> 
+                        <label for="lakilaki">Male</label>
         
+                        <input type="radio" id="perempuan" name="genderdata" value="Female"> 
+                        <label for="perempuan">Female</label>
+                    </p>
+                    <label for="textdata">Pesan :</label>
+                    <textarea id="textdata">Enter your message here</textarea>
+                    <br>
+                    <br>
+                    <button type="button" onclick="alert('Hellow World')">Submit</button>
+                </form>
+            </div>
+            <div>
+                <br>
+                <br>
+                <table>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pesan</th>
+                        <th>Profile</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><button><img src="delete-295.png" width="20px" height="20px"</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </body>
+    <script>
+        document.getElementById("nama").addEventListener("focus", function(){
+            if (this.value === "Enter your name here") {
+                this.value = "";
+            }
+        })
+        document.getElementById("textdata").addEventListener("focus", function(){
+            if (this.value === "Enter your message here") {
+                this.value = "";
+            }
+        })
+        document.getElementById("born").value = "2025-03-05";
+    </script>
 </html>
