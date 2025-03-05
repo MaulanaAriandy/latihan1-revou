@@ -1,106 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Practice</title>
+        <title>Web Test</title>
+        <link rel="stylesheet" href="basic.css">
         <style>
-            h1 {
-                text-align: center; 
-                font-family: Arial, Helvetica, sans-serif;
+            .content {
+                flex-direction: row; 
+                display: flex;
             }
-            h2 {
-                text-align: left; 
-                font-family:Arial, Helvetica, sans-serif
+            .content > div {
+                display: flex; 
+                align-content: center; 
+                justify-content: center;
             }
-            table, th, td{
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 14px;
-                text-align: left;
-                border: 1px solid black;
+            .table_person {
+                border: 2px solid black;
                 border-collapse: collapse;
             }
-            p, label {
-                font-family: Verdana, Geneva, Tahoma, sans-serif;
-                font-size: 14px;
-            }
-            .grid-container {
-                display: grid;
-                grid-template-columns: 350px 1000px 350px 350px;
-            }
-            input{
+            .table_person > tr, th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
                 text-align: left;
+                padding: 10px;
             }
-            #textdata {
-                width: 300px;
-                height: 100px;
-                text-align: left;
-                vertical-align: text-top;
-                padding: 5px;
+            footer > p {
+                text-align: end;                
             }
         </style>
     </head>
     <body>
-        <h1>Let's Practice !</h1>
-        <div class=grid-container>
-            <div>
-                <form>
-                    <h2>Form Belajar</h2>
-                    <p>Ini adalah website latihan pertama</p>
-                    <label for="nama">Nama :</label>
-                    <input type="text" value="Enter your name here" id="nama" name="namedata" style="width: 300px; height: 30px;">
-                    <br>
-                    <br>
-                    <label for="born">Tanggal Lahir</label>
-                    <input type="date" id="born" name="datedata" style="width: 300px; height: 30px;">
-                    <p>
-                        Jenis Kelamin 
-                        <input type="radio" id="lakilaki" name="genderdata" value="Male"> 
-                        <label for="lakilaki">Male</label>
+        <nav class="container">
+            <img src="original.jpg" class="logo" width="40" height="40">
+            <div class="home">Home</div>
+            <div class="search">Search</div>
+            <div class="logout">Logout</div>
+        </nav>
         
-                        <input type="radio" id="perempuan" name="genderdata" value="Female"> 
-                        <label for="perempuan">Female</label>
-                    </p>
-                    <label for="textdata">Pesan :</label>
-                    <textarea id="textdata">Enter your message here</textarea>
-                    <br>
-                    <br>
-                    <button type="button" onclick="alert('Hellow World')">Submit</button>
-                </form>
+        <header>
+            <h1>Form Belajar</h1>
+            <p>Ini adalah website latihan pertama</p>
+        </header>
+        
+        <main class="content">
+            <div style="flex: 2;">
+                <h2>Ini Form</h2>
             </div>
-            <div>
-                <br>
-                <br>
-                <table>
+            <div style="flex: 3;">
+                <table class="table_person">
                     <tr>
                         <th>Nama</th>
                         <th>Tanggal Lahir</th>
                         <th>Jenis Kelamin</th>
                         <th>Pesan</th>
                         <th>Profile</th>
-                        <th>Delete</th>
+                        <th>Hapus</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td><button><img src="delete-295.png" width="20px" height="20px"</button></td>
+                        <td>Test1</td>
+                        <td>12 Januari 1996</td>
+                        <td>Laki laki</td>
+                        <td>Belajar buat website</td>
+                        <td><a href="#">Klik disini</a></td>
+                        <td>Gambar</td>
                     </tr>
                 </table>
             </div>
-        </div>
+        </main>
+
+        <footer>
+            <p>RevoU 2025</p>
+        </footer>
+
     </body>
-    <script>
-        document.getElementById("nama").addEventListener("focus", function(){
-            if (this.value === "Enter your name here") {
-                this.value = "";
-            }
-        })
-        document.getElementById("textdata").addEventListener("focus", function(){
-            if (this.value === "Enter your message here") {
-                this.value = "";
-            }
-        })
-        document.getElementById("born").value = "2025-03-05";
-    </script>
 </html>
