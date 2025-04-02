@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img
+            class="img-slideshow" 
+            src="assets\adam-kool-ndN00KmbJ1c-unsplash.jpg" 
+        />
+        <img 
+            class="img-slideshow"
+            src="assets\clark-tibbs-kwVdnDhT7OI-unsplash.jpg"
+        />
+        <img 
+            class="img-slideshow"
+            src="assets\niko-photos-tGTVxeOr_Rs-unsplash.jpg"
+        />
+        <img 
+            class="img-slideshow"
+            src="assets\tim-swaan-eOpewngf68w-unsplash.jpg"
+        />
+        <button onclick="plusDivs(-1)">Previous</button>
+        <button onclick="plusDivs(1)">Next</button>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("img-slideshow");
+            if (n>x.length){slideIndex=1;}
+            if (n<1){slideIndex=x.length};
+
+            for(i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block"
+        }
+    </script>
+</body>
+</html>

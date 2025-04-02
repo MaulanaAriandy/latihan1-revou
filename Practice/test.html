@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/csstyle.css">
+</head>
+
+<body>
+    <header></header>
+    <!-- main content -->
+    <main>
+        <section>
+            <!-- Home content -->
+            <header>
+                <h1>HI</h1>
+                <p>Here bla bla bla</p>
+            </header>
+
+            <!-- banner autoslide -->
+            <div class="banner-img banner-1"></div>
+            <div class="banner-img banner-2"></div>
+            <div class="banner-img banner-3"></div>
+            <button onclick="nextBanner(1)">Next</button>
+        </section>
+
+        <hr/>
+
+        <section id="achievement">
+            <!-- achievement content -->
+            <div>
+                <p>Lorem Ipsum Dolor Sit Amet Adipiscing...</p>
+            </div>
+        </section>
+
+        <!-- message us content -->
+        <section id="message-us">
+            <header>
+                <h1>Message Us</h1>
+            </header>
+
+            <!-- message us content -->
+             <div class="message-us-content">
+                <form action="">
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input" name="name" placeholder="Your Name" required>
+                    <button type="button" onclick="validateForm()">Submit</button>
+                </form>
+             </div>
+        </section>
+    </main>
+
+    <!-- main footer -->
+    <footer>
+        <p>&copy: 2021 Portfolio Yama</p>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="js/jscript.js"></script>
+</body>
+
+</html>
